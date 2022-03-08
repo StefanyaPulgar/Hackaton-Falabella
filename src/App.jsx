@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+import React from 'react'
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import {Event} from './components/events-data/Events'
+import { ShowEvents } from './components/events-data/ShowEvents';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <Routes>
+      <Route path="/" element={<Event/>}/>
+      <Route path="/event" element={<ShowEvents/>}/>
+    </Routes>
+    </>
+    
+     
+
+   
+  )
 }
 
 export default App;
