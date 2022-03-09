@@ -8,7 +8,6 @@ import {
     parseDate,
 } from 'react-day-picker/moment';
 
-import 'moment/locale/it';
 // import {Link} from "react-router-dom";
 
 const BasicData = () => {
