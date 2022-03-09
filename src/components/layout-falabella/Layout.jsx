@@ -1,38 +1,35 @@
 import React from 'react'
-import {Event} from '..//events-data/Events'
+import { Event } from '..//events-data/Events'
 import SideBar from '../layout-falabella/SideBar';
 import BasicData from '../profile-data/BasicData';
 import Header from '../layout-falabella/Header';
 import styled from "styled-components";
 import Head from './Head';
+import Main from '../profile-data/Main';
 
 const Layout = () => {
-return (
-    <>
-        <div>
-                  <Header/>
-                  <Head/>
-        </div>
-        <ContainerComponents>
-            <ContainerSidebar>
-              <SideBar/>  
-            </ContainerSidebar>
-            <ContainerEvent>
-                <ContainerBasicdata>
-         <BasicData/>
+    return (
+        
+        <>
+       
+            <div>
+                <Header />
+                <Head />
+                
+            </div>
+            <ContainerComponents>
+                <ContainerSidebar>
+                    <SideBar />
+                </ContainerSidebar>
+                <ContainerEvent>
+                  <Main/>
+                </ContainerEvent>
+            </ContainerComponents>
 
-                </ContainerBasicdata>
-                <ContainerNewEvent>
-        <Event/>
-
-                </ContainerNewEvent>
-            </ContainerEvent>
-        </ContainerComponents>
-
- </>
+        </>
 
 
-)
+    )
 }
 
 export default Layout;

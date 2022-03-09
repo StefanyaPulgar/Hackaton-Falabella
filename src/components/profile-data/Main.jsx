@@ -1,41 +1,52 @@
 import React from 'react'
 import BasicData from './BasicData';
-import { Event } from '../events-data/Events';
 import { useState } from "react";
 import { db } from "../../firebase/firebase";
 import { collection, addDoc } from "firebase/firestore";
+import { ShowEvents } from '../events-data/ShowEvents';
 
 
- const Main  = () => {
-    const [nombre, cambiarNombre] = useState('');
-  const [profileData , setProfileData]= useState({});
+const Main = () => {
   
+    const [profileData, setProfileData] = useState({});
+    const [eventData, setEventData] = useState({});
+   
     const addData = async (e) => {
-          e.preventDefault();
-          console.log("funcionando addData");
-          try {
+        e.preventDefault();
+        console.log("funcionando addData");
+        try {
             const docRef = await addDoc(collection(db, 'dates'), {
-              nombre: nombre,
+                profile: {...profileData},
+                events :{...eventData}
+            
+                
             });
             console.log('Document written with ID: ', docRef.id);
-          } catch (e) {
+        } catch (e) {
             console.error('Error adding document: ', e);
-          }
-          cambiarNombre('');
-          
-        
-        };
-  return (
-    <main>
-<form onSubmit={(e) => addData(e)}>
-      {/*  <BasicData
+        }
+        setProfileData({});
+
+
+    };
+    return (
+        <main>
+            <pre>{JSON.stringify(profileData, null , 2)}</pre>
+            <button  onClick={addData}>agregar</button>
+            <div >
+                  <BasicData
         setProfileData={setProfileData}
         profileData={profileData}/>
-        */} 
-        <Event/>
-        <button type= "submit">agregar</button>
-        </form>
-    </main>
-  )
+    
+                <ShowEvents
+                eventData={eventData}
+                setEventData={setEventData}
+                addData={addData}
+                />
+               
+            </div>
+            
+        </main>
+    )
 }
 export default Main;
