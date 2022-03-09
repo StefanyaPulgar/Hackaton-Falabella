@@ -1,0 +1,41 @@
+{
+    "Clan": [
+      {
+        "id": 1,
+        "name": "MAMÁ"
+      },
+      {
+        "id": 2,
+        "name": "PAPÁ"
+      },
+      {
+        "id": 3,
+        "name": "FAMILIAR"
+      },
+      {
+        "id": 4,
+        "name": "PAREJA"
+      },
+      {
+        "id": 5,
+        "name": "OTRO,¿CUÁL?"
+      }
+    ],
+  
+    "gender": [
+      {
+        "id": 10,
+        "name": "MUJER"
+      },
+      {
+        "id": 11,
+        "name": "HOMBRE"
+      },
+      {
+        "id": 12,
+        "name": "NO BINARIO"
+      }
+    ]
+   
+  }
+  
