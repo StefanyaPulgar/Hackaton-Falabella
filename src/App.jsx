@@ -6,11 +6,12 @@ import { ShowEvents } from './components/events-data/ShowEvents';
 import SideBar from './components/layout-falabella/SideBar';
 import BasicData from './components/profile-data/BasicData';
 import Header from './components/layout-falabella/Header';
+import ShowProfiles from './components/profile-data/ShowProfiles';
 
 function App() {
   return (
     <>
-    <SideBar/>
+      <ShowProfiles/>
     <BasicData/>
     <Header/>
     <Routes>
@@ -18,6 +19,7 @@ function App() {
       <Route path="/" element={<Event/>}/>
       <Route path="/event" element={<ShowEvents/>}/>
     </Routes>
+
     </>
     
   )

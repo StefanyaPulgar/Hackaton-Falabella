@@ -7,10 +7,17 @@ import {
     formatDate,
     parseDate,
 } from 'react-day-picker/moment';
+import { useState } from "react";
+import { db } from "../../firebase/firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 // import {Link} from "react-router-dom";
 
 const BasicData = () => {
+    
+    
+  const [nombre, cambiarNombre] = useState('');
+ 
 
     return (
         <ContainerProfile>
@@ -20,7 +27,14 @@ const BasicData = () => {
                 <ContainerImgData>
                 <img alt="" src={accountIcon}></img><H3>Datos básicos</H3>
                 </ContainerImgData>
-                <P>Su nombre es <Input type="text" placeholder="Escribe su nombre"></Input></P>
+                <P>Su nombre es <Input 
+                type="text" 
+                name= "nombre"
+                value={nombre}
+                onChange={(e)=> cambiarNombre(e.target.value)}
+                placeholder="Escribe su nombre"></Input>
+                
+                </P>
                 <P>Es mi</P>
                 <ContainerImgData>
                 <Button>MAMÁ</Button>
