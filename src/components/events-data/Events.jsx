@@ -39,8 +39,8 @@ h1 {
     font-size: 1.5vw;
     font-weight: 400;
 }
-left:32.8vw;
-top:52.8vw;
+/* left:32.8vw;
+top:52.8vw; */
 `;
  
 const AddEvent = styled.div`

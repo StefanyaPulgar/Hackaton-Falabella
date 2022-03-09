@@ -8,7 +8,7 @@ import { collection, addDoc } from "firebase/firestore";
 
  const Main  = () => {
     const [nombre, cambiarNombre] = useState('');
- 
+  const [profileData , setProfileData]= useState({});
   
     const addData = async (e) => {
           e.preventDefault();
@@ -28,7 +28,10 @@ import { collection, addDoc } from "firebase/firestore";
   return (
     <main>
 <form onSubmit={(e) => addData(e)}>
-        <BasicData/>
+      {/*  <BasicData
+        setProfileData={setProfileData}
+        profileData={profileData}/>
+        */} 
         <Event/>
         <button type= "submit">agregar</button>
         </form>
