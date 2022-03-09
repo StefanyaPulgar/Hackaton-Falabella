@@ -9,10 +9,10 @@ import Head from './Head';
 const Layout = () => {
 return (
     <>
-        <div>
+        <section>
                   <Header/>
                   <Head/>
-        </div>
+        </section>
         <ContainerComponents>
             <ContainerSidebar>
               <SideBar/>  
