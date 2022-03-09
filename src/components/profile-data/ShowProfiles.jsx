@@ -5,21 +5,21 @@ import { useEffect, useState } from "react";
 
  const ShowProfiles = () => {
 
-    const [datos , cambiarDatos] = useState([]);
+    const [data , setData] = useState([]);
 
     useEffect(() => {
         const q = query(collection(db, "dates"));
         onSnapshot(q, (snapshot) => {
           //console.log('se ejecuto snapshot')
           // console.log(snapshot.docs[0].data());
-          const listaNombres = snapshot.docs.map((documento) => {
+          const listData = snapshot.docs.map((documento) => {
             //aplico map a todos los elementos de la coleccion
             //por cada elemento de la base de dato quiero que me devuelva
             //y guardes en el arreglo un objeto, documento.data y un id 
             return { ...documento.data(), id: documento.id }
     
           })
-          cambiarDatos(listaNombres);
+          setData(listData);
     
         },
           (error) => {
@@ -27,14 +27,20 @@ import { useEffect, useState } from "react";
           }
         );
       }, []);
-  
+    
+      
+console.log(data)
+  // console.log(data.profile.nombre);
       return (
           <>
-    {datos.map((list, index) => (
+    {data.map((documento, index) => (
         <div key={index}>
-        <p>{list.nombre}</p>
+        <p>
+        {documento.profile.nombre}
+        </p>
+        {documento.events.evento}
         </div>
-    ))}
+    ))} 
     </>
       )
 }

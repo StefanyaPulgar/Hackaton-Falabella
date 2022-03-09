@@ -1,0 +1,39 @@
+{"event": [
+    {
+      "id": 1,
+      "name": "Cumpleaños",
+      "img": "https://i.postimg.cc/KzLL5vQY/cumplea-os.png"
+
+    },
+    {
+      "id": 2,
+      "name": "Aniversario",
+      "img":"https://i.postimg.cc/sxxMNj4S/aniversario.png"
+
+    },
+    {
+      "id": 3,
+      "name": "Navidad",
+      "img":"https://i.postimg.cc/vmvD8gPf/navidad.png"
+
+    },
+    {
+      "id": 4,
+      "name": "Vacaciones",
+      "img": "https://i.postimg.cc/2ygS946R/vacaciones.png"
+
+    },
+    {
+      "id": 5,
+      "name": "18 de septiembre",
+      "img":"https://i.postimg.cc/d0WkmZ8v/18-sept.png"
+
+    },
+    {
+        "id":"Fechas especiales",
+        "name": "18 de septiembre",
+        "img":"https://i.postimg.cc/2jLbh63R/fecha-especial.png"
+
+      }
+  ]
+}
