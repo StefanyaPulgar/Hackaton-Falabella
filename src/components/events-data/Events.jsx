@@ -2,11 +2,21 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import { ShowEvents } from './ShowEvents'
 import { Link } from "react-router-dom";
+import changeComponent from '../layout-falabella/prueba';
 
 
 export const Event = () => {
 
     const [stateEvent, setStateEvent] = useState(false);
+
+    // const changeComponent = (option) => {
+    //     switch(option) {
+    //         case "principal": 
+    //         return <Event/>;
+    //         case "evento":
+    //         return <BasicData/>
+    //     }
+    // }
 
     return (
         <>
@@ -14,10 +24,10 @@ export const Event = () => {
         <h1>Eventos e intereses</h1>
             <AddEvent>
                 <h3>Agrega un evento para tu persona favorita</h3>
-                    <Link to="/event">
-                      <ButtonEvent>Agregar evento</ButtonEvent>
+                    {/* <Link to="/event"> */}
+                      <ButtonEvent >Agregar evento</ButtonEvent>
 
-                    </Link>
+                    {/* </Link> */}
             </AddEvent>
         </EventContainer>
         </>
@@ -28,8 +38,8 @@ const EventContainer = styled.section`
 display: flex;
 flex-direction: column;
 position: absolute;
-width: 73.3vw;
-height: 48.1vh;
+width: 65.2vw;
+height: auto;
 background: #FFFFFF;
 box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.2);
 font-family: 'Lato', sans-serif;
@@ -62,4 +72,5 @@ border: none;
 width: 16.4vw;
 height: 6vh;
 font-size: 1.4vw;
+margin-bottom:2vh ;
 `;

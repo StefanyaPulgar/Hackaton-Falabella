@@ -29,7 +29,7 @@ const Div = styled.div`
 margin:1.5% ;
 display: flex ;
 width: 89vw;
-height: 15.4vh;
+height: 12.4vh;
 box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.2);
 font-family: "lato";
 font-weight: 700 ;

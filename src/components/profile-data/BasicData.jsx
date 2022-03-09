@@ -76,19 +76,18 @@ color: #68717D;
 const ContainerProfile = styled.div`
 background: #FFFFFF;
 box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.2);
-width: 939px;
-height: 391px;
+width: 62.2vw;
+height: 44vh;
 /* left: 421px;
 top: 265px; */
 padding:2%;
 `
 const ContainerBasicData = styled.div`
 background: #FBFBFB;
-width: 881px;
-height: 252px;
-left: 448px;
-top: 382px;
+width: 59vw;
+height: 30vh;
 padding: 2%;
+margin-top:1vh;
 `
 const ContainerImgData = styled.div`
 display: flex;
@@ -102,8 +101,7 @@ font-size: 16px;
 color: #333333;
 width: 97px;
 height: 16px;
-right: 849px;
-top: 399px;
+
 `
 const Input = styled.input`
 border: none;
@@ -111,6 +109,10 @@ outline: none;
 border-bottom: 0.5px solid #BBBBBB;
 background: transparent;
 font-size: 2.46vh;
+  ::-webkit-input-placeholder {
+    font-size: 1.5vw;
+  }
+  
 `
 const Button = styled.button`
 text-align: center;

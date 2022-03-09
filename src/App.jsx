@@ -12,7 +12,7 @@ function App() {
     <>
     <Routes>
       <Route path="/" element={<Layout/>}/>
-      <Route path="/event" element={<ShowEvents/>}/>
+      {/* <Route path="/event" element={<ShowEvents/>}/> */}
     </Routes>
     </>
     
