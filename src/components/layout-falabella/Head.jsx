@@ -6,13 +6,13 @@ const Head = () =>{
     return (
         <ContainerHead>
             <Div>
-                <div>
+                <DivImg>
                                 <img src={person} alt=""/>
-                </div>
-                <div>
-                    <p>BIENVENID@</p>
-                    <p>Nicolas Hernandez</p>
-                </div>
+                </DivImg>
+                <DivInfo>
+                    <Divp>B I E N V E N I D @ </Divp>
+                    <Divp2>Nicolas Hernandez</Divp2>
+                </DivInfo>
             </Div>
         </ContainerHead>
     )
@@ -21,16 +21,42 @@ const Head = () =>{
 export default Head;
 
 const ContainerHead = styled.section`
-width: 97.7vw;
-height: 15.4vh;
-border: 1px solid black;
+display: flex ;
+justify-content:center ;
 `
 
 const Div = styled.div`
 margin:1.5% ;
-display: grid ;
-grid-template-columns: 1fr 6fr ;
+display: flex ;
+width: 89vw;
+height: 15.4vh;
+box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.2);
 font-family: "lato";
 font-weight: 700 ;
 font-style: bold ;
+
+`
+
+const DivImg = styled.div`
+margin-left: 3vw;
+margin-top: 3vh;
+margin: 3vh 1vw 0 3vw;
+img {
+    width: 90%;
+}
+`
+
+const DivInfo = styled.div`
+line-height: normal ;
+margin-top:4.2vh ;
+
+`
+const Divp = styled.p`
+font-size:1vw ;
+margin:0%;
+`
+
+const Divp2 = styled.p`
+margin:0%;
+    font-size: 1.8vw ;
 `
