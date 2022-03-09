@@ -59,7 +59,7 @@ const ContainerHeader = styled.div`
 padding: 0%;
 display:flex;
 background: #FF6200;
-width: 192.77vw;
+width: 100vw;
 height:9.60vh;
 align-items: center;
 `

@@ -78,8 +78,8 @@ background: #FFFFFF;
 box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.2);
 width: 939px;
 height: 391px;
-left: 421px;
-top: 265px;
+/* left: 421px;
+top: 265px; */
 padding:2%;
 `
 const ContainerBasicData = styled.div`
