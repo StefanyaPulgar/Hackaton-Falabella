@@ -1,25 +1,25 @@
-import React, {useState} from 'react'
+// import React, { useState } from 'react'
 import styled from 'styled-components'
-import { ShowEvents } from './ShowEvents'
+// import { ShowEvents } from './ShowEvents'
 import { Link } from "react-router-dom";
 
 
 export const Event = () => {
 
-    const [stateEvent, setStateEvent] = useState(false);
+    // const [stateEvent, setStateEvent] = useState(false);
 
     return (
         <>
-        <EventContainer>
-        <h1>Eventos e intereses</h1>
-            <AddEvent>
-                <h3>Agrega un evento para tu persona favorita</h3>
+            <EventContainer>
+                <h1>Eventos e intereses</h1>
+                <AddEvent>
+                    <h3>Agrega un evento para tu persona favorita</h3>
                     <Link to="/event">
-                      <ButtonEvent>Agregar evento</ButtonEvent>
+                        <ButtonEvent>Agregar evento</ButtonEvent>
 
                     </Link>
-            </AddEvent>
-        </EventContainer>
+                </AddEvent>
+            </EventContainer>
         </>
     )
 }
@@ -42,7 +42,7 @@ h1 {
 /* left:32.8vw;
 top:52.8vw; */
 `;
- 
+
 const AddEvent = styled.div`
 display: flex;
 align-items: center;

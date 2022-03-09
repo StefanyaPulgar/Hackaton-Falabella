@@ -145,7 +145,4 @@ cursor: pointer;
 border: 0.86px solid #E0E0E0;
 box-sizing: border-box;
 border-radius: 4.28px;
-`
-// const DayPickerInput = styled.p`
-// border:none;
-// `
+`;
