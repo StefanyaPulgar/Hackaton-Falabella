@@ -15,86 +15,97 @@ const SideBar = () => {
   return(
   
     <Div>
+      <Section>
     <Button> <Img alt="" src={datos} />
-    <b>Mis datos personales</b>
+    <Parrafo><strong>Mis datos personales</strong></Parrafo>
     <Img alt="" src={flecha} />
     </Button>
     <Button>
     <Img alt="" src={compras} />
-     Mis compras        
+    <Parrafo>Mis compras</Parrafo>      
      <Img alt="" src={flecha} />
      </Button>
     <Button>
     <Img alt="" src={direccion} />
-      Mis direcciones
+    <Parrafo>Mis direcciones</Parrafo>  
     <Img alt="" src={flecha} />
     </Button>
     <Button>
     <Img alt="" src={pagos} />
-    Mis medios de pago
+    <Parrafo>Mis medios de pago</Parrafo>
     <Img alt="" src={flecha} /> 
     </Button>
     <Button>
     <Img alt="" src={pfavorita} />
-    <b>Mis personas Favoritas </b>
+    <Parrafo><strong>Mis personas Favoritas </strong></Parrafo>
     <Img alt="" src={flecha} />
    </Button>
     <Button>
     <Img alt="" src={cmr} />
-    Mi CMRR
+    <Parrafo>Mi CMR</Parrafo>
     <Img alt="" src={flecha} />
     </Button>
     <Button>
     <Img alt="" src={giftcard} />
-    Mis Gift cards
+    <Parrafo>Mis Gift cards</Parrafo>
     <Img alt="" src={flecha} />
     </Button>
     <Button>
     <Img alt="" src={contraseña} />
-     Cambiar mi contraseña 
+    <Parrafo>Cambiar mi contraseña </Parrafo>
     <Img alt="" src={flecha} />
     </Button>
     <Button>
     <Img alt="" src={cerrar} />
-     Cerrar sesion
+    <Parrafo>Cerrar sesion</Parrafo>
      <Img alt="" src={flecha} />
     </Button>
+    </Section>
    </Div>
    );
 };
 export default SideBar;
   
 const Div = styled.div`
-display:grid ;
-grid-template-rows:auto;
-height: 97.5vh;
-width: 25vw;
+height: auto;
+width: 22vw;
 border-radius: 0.3vw;
 position: absolute;
 background: #ffffff;
 box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.2);
 border-radius: 4px;
+margin-left:4.8vw ;
+`
+const Section = styled.section`
+margin:1.6vw;
+display:;
+flex-direction:column ;
+justify-content: flex-start ;
 `
 
 const Button = styled.button`
-display:grid;
-grid-template-columns:1fr 4fr 1fr ;
-justify-content:center ;
+display:inline-flex;
+width:100%;
+/* grid-template-columns:0.5fr 5fr 0.5fr ; */
+justify-content:flex-start ;
 align-items:center ;
 background:none;
-border:none;
-border: 1px solid #F0F0F0;
+border: none;
+padding:1vw;
+border-bottom: 1px solid #F0F0F0;
 font-family: "Lato";
 font-style: normal;
 font-weight: normal;
 font-size: 1.2vw;
-justify-content:space-around;
 background: #ffffff;
 `
 const Img = styled.img`
 
 position: relative;
-left: 39.58%;
-right: 39.58%;
+display:flex ;
+justify-content:flex-start ;
 background: #FFFFFF;
+`
+const Parrafo = styled.p`
+
 `

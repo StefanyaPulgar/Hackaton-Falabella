@@ -2,20 +2,21 @@ import styled from "styled-components";
 import logo1 from "./assets/logo1.svg";
 import lupe from "./assets/lupe.svg";
 import cart from "./assets/cart.svg";
+import fill from "../../icons/fill.svg";
+import arrow from "../../icons/arrowdown.svg";
+import menu from "../../icons/menu.svg";
 
 
 const Header = () => {
     return (
+        <>
         <ContainerHeader>
             <ContainerLogo>
                 <Img src={logo1} alt="" />
             </ContainerLogo>
             <ContainerMenu>
                 <SpanDiv>
-                    <Span></Span>
-                    <Span></Span>
-                    <Span></Span>
-
+                 <img src={menu} alt=""/>
                 </SpanDiv>
                 <SpanMenu>Menú</SpanMenu>
             </ContainerMenu>
@@ -43,6 +44,22 @@ const Header = () => {
             </ContainerOptions>
 
         </ContainerHeader>
+        <ContainerHeaderDown>
+            <SubContainerLeft>
+              <img src={fill} alt=""/>
+            <p>Entrega en <strong>Providencia</strong></p>  
+            </SubContainerLeft>
+            <SubContainerRight>
+                <p>Vende con nosotros</p>
+                <p>Fpay</p>
+                <p>Tarjeta CMR</p>
+                <img src={arrow} alt=""/>
+                <p>Ayuda</p>
+                <img src={arrow} alt=""/>
+            </SubContainerRight>
+            
+        </ContainerHeaderDown>
+        </>
     );
 }
 
@@ -60,7 +77,7 @@ padding: 0%;
 display:flex;
 background: #FF6200;
 width: 100vw;
-height:9.60vh;
+height:8.3vh;
 align-items: center;
 `
 const Img = styled.img`
@@ -68,16 +85,10 @@ cursor: pointer;
 margin-left: 10%;
 width:80%;
 `
-const Span = styled.span`
-display: block;
-width: 2vw;
-height: 0.45vh;
-background: white;
-margin: 0.70vw;
-`
+
 const SpanDiv = styled.div`
-// width: 3vw;
-// height: 6.42vh;
+margin-left:1.2vw ;
+margin-top:0.4vh ;
 `
 const SpanMenu = styled.a`
 font-family: Lato;
@@ -95,8 +106,7 @@ width:4%;
 `
 const Search = styled.div`
 display:flex;
-margin: 0% 1% 0% 1%;
-height:100%;
+margin: 0% 1% 0% 6%;
 align-items:center;
 `
 const SearchInput = styled.input`
@@ -149,6 +159,40 @@ height: 100%;
 
 const ContainerOptions = styled.div`
 display:flex;
-width:40%;
 `
 
+const ContainerHeaderDown = styled.section`
+width: 100%;
+height: 6vh ;
+background-color: #FFFFFF ;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+font-family: "Lato" ;
+font-size: 1vw ;
+display: flex ;
+justify-content: space-between ;
+`
+
+const SubContainerLeft = styled.section`
+display: flex;
+margin-left: 2.2vw ;
+margin-top:1vh;
+img {
+    width:1vw ;
+    margin-right: 1vw ;
+    margin-bottom:0.7vh ;
+}
+`
+
+const SubContainerRight = styled.section`
+display: flex;
+margin-top:1vh;
+margin-right:1vw;
+p{
+  margin-left:2vw; 
+}
+img {
+    width:0.5vw ;
+    margin-left:0.3vw ;
+    margin-bottom:0.5vh ;
+}
+`
