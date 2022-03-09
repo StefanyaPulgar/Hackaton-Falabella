@@ -41,7 +41,7 @@ const SideBar = () => {
    </Button>
     <Button>
     <Img alt="" src={cmr} />
-    Mi CMR 
+    Mi CMRR
     <Img alt="" src={flecha} />
     </Button>
     <Button>
