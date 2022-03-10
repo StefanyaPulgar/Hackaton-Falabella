@@ -16,13 +16,15 @@ const CreateProfile = ({setView}) => {
 export default CreateProfile;
 
 const ContainerCreate = styled.section`
-width: 62.2vw;
+width: 66.2vw;
 height: 60vh;
 align-items:center;
 background-color: #FFFFFF;
 box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.2);
-// background: pink;
-}
+margin-left: 14vw;
+display: flex;
+justify-content: center;
+
 `
 const Button = styled.button`
 background: ##FF6200;
