@@ -39,8 +39,9 @@ export const Event = ({ setShowEvent }) => {
 const EventContainer = styled.section`
 display: flex;
 flex-direction: column;
-position: absolute;
-width: 65.2vw;
+// position: absolute;
+// width: 65.2vw;
+width: 100%;
 height: auto;
 background: #FFFFFF;
 box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.2);
@@ -51,8 +52,6 @@ h1 {
     font-size: 1.5vw;
     font-weight: 400;
 }
-/* left:32.8vw;
-top:52.8vw; */
 `;
 
 const AddEvent = styled.div`
@@ -75,4 +74,9 @@ width: 16.4vw;
 height: 6vh;
 font-size: 1.4vw;
 margin-bottom:2vh ;
+
+&:hover  {
+    background: #FF6200;
+    // display: none;
+}
 `;

@@ -16,12 +16,8 @@ const Layout = () => {
     return (
 
         <>
-
-            <section>
                 <Header />
                 <Head />
-
-            </section>
             <ContainerComponents>
                 <ContainerSidebar>
                     <SideBar setView={setView}/>

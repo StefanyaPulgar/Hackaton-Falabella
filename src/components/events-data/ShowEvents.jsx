@@ -1,15 +1,14 @@
+import styled , { css }  from "styled-components";
 import React from "react";
-import styled from "styled-components";
 import cumpleaños from "../../icons/present.svg";
 import aniversario from "../../icons/celebration.svg";
 import navidad from "../../icons/tree.svg";
 import vacaciones from "../../icons/vacation.svg";
 import fpatria from "../../icons/flag.svg";
 import fechaEspecial from "../../icons/specialdate.svg";
-import arrowUp from "../../icons/up.svg";
 import calendario from "../../icons/calendar.svg";
 
-export const ShowEvents = ({ eventData, setEventData, addData, }) => {
+export const ShowEvents = ({ eventData, setEventData, addData}) => {
   return (
     <EventContainer>
       <h1>Eventos e intereses</h1>
@@ -21,9 +20,9 @@ export const ShowEvents = ({ eventData, setEventData, addData, }) => {
               <img src={calendario} alt="Calendario" />
               <h3>Agregar celebracion</h3>
             </ContainerCelebration>
-            <ArrowUp>
+            {/* <ArrowUp>
               <img src={arrowUp} alt="Up" />
-            </ArrowUp>
+            </ArrowUp> */}
           </AddCelebration>
           <section>
             <Titles>Estamos celebrando:</Titles>
@@ -96,9 +95,12 @@ const EventContainer = styled.main`
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 73.3vw;
-  height: 48.1vh;
+  // width: 73.3vw;
+  width:65vw;
+  // height: 48.1vh;
+  height: 70%;
   background: #ffffff;
+  // background: blue;
   box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.2);
   font-family: "Lato", sans-serif;
   font-style: normal;
@@ -108,8 +110,6 @@ const EventContainer = styled.main`
     font-weight: 400;
     margin-left: 0.5vw;
   }
-  /* left:32.8vw;
-top:52.8vw; */
 `;
 
 const AddEvent = styled.section`
@@ -119,6 +119,8 @@ const AddEvent = styled.section`
 
 const ContainerEvent = styled.section`
   margin-left: 1.5vw;
+  width: 95%;
+  // background: pink;
 `;
 
 const AddCelebration = styled.section`
@@ -137,15 +139,6 @@ const ContainerCelebration = styled.div`
   h3 {
     font-size: 1.2vw;
     font-weight: 400;
-  }
-`;
-
-const ArrowUp = styled.div`
-  position: absolute;
-  right: 1vw;
-  top: 4vw;
-  img {
-    width: 1.029vw;
   }
 `;
 
@@ -183,10 +176,15 @@ img {
     left:1.2vw;
 }
 span{
-    position: absolute;
+    // position: absolute;
 font-size: 0.7vw;
-bottom: 18.4vh;
+// bottom: 18.4vh;
 }
+
+${props => props.secondary && css `
+border: 1px solid #FF6200;
+background: rgba(255, 98, 0, 0.05);
+`}
 `
 const AllContainerIntereses = styled.section`
 margin-top: 4vh;
@@ -194,7 +192,9 @@ margin-top: 4vh;
 
 const ContainerIntereses = styled.section`
 background: #FBFBFB;
-width: 44.9vw;
+// width: 44.9vw;
+// background: green;
+width: 95%;
 
 padding-top: 1vh;
 `
@@ -242,5 +242,10 @@ border: none;
 width: 16.4vw;
 height: 6vh;
 font-size: 1.4vw;
+
+&:hover  {
+  background: #FF6200;
+  // display: none;
+}
 `;
 
