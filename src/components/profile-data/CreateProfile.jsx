@@ -3,11 +3,13 @@ import styled from "styled-components"
 
 const CreateProfile = ({setView}) => {
     return (
+
         <ContainerCreate>
             <Button onClick={()=>{setView(2)}}>
                 Crear nuevo perfil
             </Button>
         </ContainerCreate>
+
     )
 }
 
@@ -15,8 +17,12 @@ export default CreateProfile;
 
 const ContainerCreate = styled.section`
 width: 62.2vw;
-height: 44vh;
+height: 60vh;
+align-items:center;
 background-color: #FFFFFF;
+box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.2);
+// background: pink;
+}
 `
 const Button = styled.button`
 background: ##FF6200;
@@ -36,7 +42,10 @@ font-weight: 700;
 font-size: 1rem;
 
 color: #FFFFFF;
-
+&:hover  {
+    background: #FF6200;
+    // display: none;
+}
 }
 
 `

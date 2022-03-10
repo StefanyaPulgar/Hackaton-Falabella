@@ -14,9 +14,6 @@ const Main = ({ view, setView }) => {
 
   const [profileData, setProfileData] = useState({});
   const [eventData, setEventData] = useState({});
-
-  // const [view, setView] = useState(1);
-
   const [showEvent, setShowEvent] = useState(false);
 
   const addData = async (e) => {
@@ -38,41 +35,74 @@ const Main = ({ view, setView }) => {
 
   };
 
-  const functionBtn = () => {
-    addData()
+  const functionBtn = (e) => {
+    addData(e)
     setView(3)
   }
+
   return (
-    <main>
-        <BasicData
+    <>
+    <ContainerMain>
+      {view === 1 && <div><CreateProfile setView={setView} /></div>}
+
+
+      {view === 2 && <div>
+
+        <div><SectionProfile><BasicData
           setProfileData={setProfileData}
-          profileData={profileData} />
+          profileData={profileData} /></SectionProfile>
 
         {showEvent === false &&
-          <Event setShowEvent={setShowEvent}
+          <SectionEventBtn><Event setShowEvent={setShowEvent}
             eventData={eventData}
             setEventData={setEventData}
             addData={addData}
-          />}
+          /> </SectionEventBtn>}
 
-        {showEvent && <div><ShowEvents /></div>}
-        <ContainerBtns>
-          <DeleteBtn>Cancelar</DeleteBtn>
-          <CreateProfileBtn onClick={() => functionBtn()}>Crear perfil</CreateProfileBtn>
-        </ContainerBtns>
+        {showEvent && <SectionEvents><ShowEvents /></SectionEvents>}
+        </div>
       </div>}
 
-
-      {/* { (view !== 3 && view !== 0) && <ContainerBtns>
-        <DeleteBtn>Cancelar</DeleteBtn>
-        <CreateProfileBtn onClick={() => functionBtn()}>Crear perfil</CreateProfileBtn>
-      </ContainerBtns>   } */}
-
       {view === 3 && <div><ShowProfiles /></div>}
+      
 
-    </main >
+    </ContainerMain >
+    <ContainerBtns>
+          <DeleteBtn>Cancelar</DeleteBtn>
+          <CreateProfileBtn onClick={(e) => functionBtn(e)}>Crear perfil</CreateProfileBtn>
+        </ContainerBtns>
+    </>
+    
   )
 }
+
+const SectionEventBtn = styled.div`
+display: flex;
+margin: 5%;
+width: 100%;
+`
+
+const SectionEvents = styled.div`
+display: flex;
+margin: 5%;
+width: 100%;
+`
+const SectionProfile = styled.div`
+display: flex;
+margin: 5%;
+width: 100%;
+// height: 80%;
+// background: pink;
+`
+
+const ContainerMain = styled.main`
+display:flex;
+// justify-content: center;
+flex-direction: row;
+width: 100%;
+height:165vh;
+// background:green;
+`
 
 const ContainerBtns = styled.div`
 display:flex;
@@ -80,7 +110,7 @@ justify-content:flex-end;
 background: #FFFFFF;
 box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.2);
 // width: 68vw;
-width: 50%;
+width: 100%;
 height: 16vh;
 align-items: center;
 `
