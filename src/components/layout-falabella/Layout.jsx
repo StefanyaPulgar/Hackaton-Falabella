@@ -12,11 +12,11 @@ const Layout = () => {
         
         <>
        
-            <div>
+            <section>
                 <Header />
                 <Head />
                 
-            </div>
+            </section>
             <ContainerComponents>
                 <ContainerSidebar>
                     <SideBar />
@@ -48,8 +48,14 @@ grid-template-rows: 1.5fr 1fr ;
 
 `
 
-// const ContainerBasicdata = styled.section`
-// `
+const ContainerBasicdata = styled.section`
+position:static;
+margin-left: 2vw;
+`
 
-// const ContainerNewEvent = styled.section`
-// `
+const ContainerNewEvent = styled.section`
+margin-top:2vh;
+position:static;
+margin-left: 2vw;
+`
+

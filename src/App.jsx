@@ -13,8 +13,10 @@ function App() {
     
     <Routes>
       <Route path="/" element={<Layout/>}/>
+
       <Route path="/event" element={<ShowEvents/>}/>
       <Route path="/ShowProfiles" element={<ShowProfiles/>}/>
+      <Route path="/event" element={<ShowEvents/>}/> */}
 
     </Routes>
 

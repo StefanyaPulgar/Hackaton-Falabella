@@ -50,7 +50,7 @@ const Header = () => {
             <p>Entrega en <strong>Providencia</strong></p>  
             </SubContainerLeft>
             <SubContainerRight>
-                <p>Vende con nostros</p>
+                <p>Vende con nosotros</p>
                 <p>Fpay</p>
                 <p>Tarjeta CMR</p>
                 <img src={arrow} alt=""/>
@@ -77,7 +77,7 @@ padding: 0%;
 display:flex;
 background: #FF6200;
 width: 100vw;
-height:9.60vh;
+height:8.3vh;
 align-items: center;
 `
 const Img = styled.img`
@@ -88,6 +88,7 @@ width:80%;
 
 const SpanDiv = styled.div`
 margin-left:1.2vw ;
+margin-top:0.4vh ;
 `
 const SpanMenu = styled.a`
 font-family: Lato;
@@ -162,7 +163,7 @@ display:flex;
 
 const ContainerHeaderDown = styled.section`
 width: 100%;
-height: 7vh ;
+height: 6vh ;
 background-color: #FFFFFF ;
 box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
 font-family: "Lato" ;
@@ -174,20 +175,24 @@ justify-content: space-between ;
 const SubContainerLeft = styled.section`
 display: flex;
 margin-left: 2.2vw ;
-
+margin-top:1vh;
 img {
     width:1vw ;
     margin-right: 1vw ;
+    margin-bottom:0.7vh ;
 }
 `
 
 const SubContainerRight = styled.section`
 display: flex;
+margin-top:1vh;
+margin-right:1vw;
 p{
-  margin-left:1.5vw; 
+  margin-left:2vw; 
 }
 img {
     width:0.5vw ;
     margin-left:0.3vw ;
+    margin-bottom:0.5vh ;
 }
 `
