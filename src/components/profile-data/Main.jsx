@@ -4,7 +4,8 @@ import { useState } from "react";
 import { db } from "../../firebase/firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { ShowEvents } from '../events-data/ShowEvents';
-
+import styled from "styled-components";
+import CreateProfile from './CreateProfile';
 
 const Main = () => {
 
@@ -31,9 +32,9 @@ const Main = () => {
   };
   return (
     <main>
-      <pre>{JSON.stringify(profileData, null, 2)}</pre>
-      <button onClick={addData}>agregar</button>
-      <div >
+      {/* <pre>{JSON.stringify(profileData, null, 2)}</pre>
+      <button onClick={addData}>agregar</button> */}
+      {/* <div >
         <BasicData
           setProfileData={setProfileData}
           profileData={profileData} />
@@ -44,9 +45,11 @@ const Main = () => {
           addData={addData}
         />
 
-      </div>
-
+      </div> */}
+        <CreateProfile/>
     </main>
   )
 }
 export default Main;
+
+
