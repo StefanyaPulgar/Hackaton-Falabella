@@ -48,7 +48,7 @@ const BasicData = ({setProfileData, profileData}) => {
                     <Button  onClick={()=> setProfileData({...profileData, genero : "NO BINARIO"})}>NO BINARIO</Button>
                     <P>Su fecha de nacimiento es el: <DayPickerInput
                         value={profileData.fecha}
-                        onChange={(e)=> setProfileData({...profileData , fecha:e.target.value})}
+                        onDayChange={(day)=> setProfileData({...profileData , fecha: day})}
                         formatDate={formatDate}
                         parseDate={parseDate}
                         placeholder={`${formatDate(new Date())}`} /></P>

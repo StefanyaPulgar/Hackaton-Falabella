@@ -1,13 +1,12 @@
 import React from 'react'
 import BasicData from './BasicData';
 import { useState } from "react";
-import { db } from "../../firebase/firebase";
+import { db } from "../../firebaseConfig/firebase";
 import { collection, addDoc, doc , deleteDoc } from "firebase/firestore";
 import { ShowEvents } from '../events-data/ShowEvents';
 
 
 const Main = () => {
-  
     const [profileData, setProfileData] = useState({});
     const [eventData, setEventData] = useState({});
    
