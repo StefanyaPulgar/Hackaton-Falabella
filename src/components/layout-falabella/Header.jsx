@@ -5,7 +5,7 @@ import cart from "./assets/cart.svg";
 import fill from "../../icons/fill.svg";
 import arrow from "../../icons/arrowdown.svg";
 import menu from "../../icons/menu.svg";
-
+import arrowHeader from "../../icons/arrow-filter.svg";
 
 const Header = () => {
     return (
@@ -31,14 +31,12 @@ const Header = () => {
             </Search>
 
             <ContainerOptions>
-            <ContainerA>
-                <UserA href=""><span>Hola</span>
-                    <span>Inicia Sesión</span> </UserA>
+            <ContainerA href="">
+            <p>Hola<br/>Inicia sesion <img src={arrowHeader} alt=""/></p> 
+  
             </ContainerA>
             <ContainerA>
-                <UserA href=""><span>Mis</span>
-                    <span>compras</span>
-                </UserA>
+            <P>Mis<br/>Compras</P> 
             </ContainerA>
             <ContainerA>
                 <a href="/"><img src={cart} alt="" /></a>
@@ -99,18 +97,20 @@ font-weight: bold;
 font-size: 1.3rem;
 color: #FFFFFF;
 cursor: pointer;
+
 `
 const ContainerMenu = styled.div`
 display:flex;
 align-items: center;
 justify-content: space-between;
 width:4%;
+margin-right: 2vw;
 `
 const Search = styled.div`
 display:flex;
 margin: 0% 1% 0% 6%;
 align-items:center;
-width: 30.625vw;
+width: 52vw;
 `
 
 const I = styled.div`
@@ -156,7 +156,11 @@ width: 3.95vw;
 background: #495867;
 height: 6.5vh;
 `
-const UserA = styled.div`
+
+const ContainerA = styled.div`
+// width: 4.875vw
+// height: 4.95vh;
+height: 100%;
 display: flex;
 flex-direction: column;
 font-family: Lato;
@@ -165,16 +169,25 @@ font-weight: bold;
 font-size: 1.1rem;
 color:#FFFFFF;
 cursor: pointer;
+a {
+    margin-top: 1.3vh;
+}
 `
-const ContainerA = styled.div`
-// width: 4.875vw
-width: 11%;
-// height: 4.95vh;
-height: 100%;
+
+const P = styled.p`
+border-left: 1px solid white;
+border-right: 1px solid white;
+margin-left: -1vw;
+padding-left:2vw;
+margin-right: 2vw;
 `
 
 const ContainerOptions = styled.div`
-display:flex;
+display:grid;
+justify-content: space-around;
+width: 40vw;
+grid-template-columns: 1fr 1fr 0.5fr;
+align-items: center;
 `
 
 const ContainerHeaderDown = styled.section`
