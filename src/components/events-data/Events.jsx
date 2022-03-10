@@ -1,13 +1,13 @@
-import React, {useState} from 'react'
+// import React, { useState } from 'react'
 import styled from 'styled-components'
-import { ShowEvents } from './ShowEvents'
+// import { ShowEvents } from './ShowEvents'
 import { Link } from "react-router-dom";
 import changeComponent from '../layout-falabella/prueba';
 
 
 export const Event = () => {
 
-    const [stateEvent, setStateEvent] = useState(false);
+    // const [stateEvent, setStateEvent] = useState(false);
 
     // const changeComponent = (option) => {
     //     switch(option) {
@@ -20,6 +20,7 @@ export const Event = () => {
 
     return (
         <>
+
         <EventContainer>
         <h1>Eventos e intereses</h1>
             <AddEvent>
@@ -30,6 +31,7 @@ export const Event = () => {
                     {/* </Link> */}
             </AddEvent>
         </EventContainer>
+
         </>
     )
 }
@@ -52,7 +54,7 @@ h1 {
 /* left:32.8vw;
 top:52.8vw; */
 `;
- 
+
 const AddEvent = styled.div`
 display: flex;
 align-items: center;

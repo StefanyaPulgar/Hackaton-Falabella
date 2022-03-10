@@ -1,40 +1,35 @@
 import React from 'react'
-import {Event} from '..//events-data/Events'
+// import { Event } from '..//events-data/Events'
 import SideBar from '../layout-falabella/SideBar';
-import BasicData from '../profile-data/BasicData';
+// import BasicData from '../profile-data/BasicData';
 import Header from '../layout-falabella/Header';
 import styled from "styled-components";
 import Head from './Head';
-import ChangeComponent from './prueba';
+import Main from '../profile-data/Main';
 
-const Layout = () => {  
+const Layout = () => {
+    return (
+        
+        <>
+       
+            <section>
+                <Header />
+                <Head />
+                
+            </section>
+            <ContainerComponents>
+                <ContainerSidebar>
+                    <SideBar />
+                </ContainerSidebar>
+                <ContainerEvent>
+                  <Main/>
+                </ContainerEvent>
+            </ContainerComponents>
 
-return (
-    <>
-        <section>
-                  <Header/>
-                  <Head/>
-        </section>
-        <ContainerComponents>
-            <ContainerSidebar>
-              <SideBar/>  
-            </ContainerSidebar>
-            <ContainerEvent>
-                <ContainerBasicdata>
-         <BasicData/>
-
-                </ContainerBasicdata>
-                <ContainerNewEvent>
-        <Event/>
-
-                </ContainerNewEvent>
-            </ContainerEvent>
-        </ContainerComponents>
-
- </>
+        </>
 
 
-)
+    )
 }
 
 export default Layout;
@@ -63,3 +58,4 @@ margin-top:2vh;
 position:static;
 margin-left: 2vw;
 `
+
