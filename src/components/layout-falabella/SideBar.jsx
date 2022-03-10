@@ -11,61 +11,61 @@ import contraseña from "../../icons/password.svg";
 import cerrar from "../../icons/close.svg";
 import flecha from "../../icons/arrow.svg";
 
-const SideBar = () => {
-  return(
-  
+const SideBar = ({setView}) => {
+  return (
+
     <Div>
       <Section>
-    <Button> <Img alt="" src={datos} />
-    <Parrafo><strong>Mis datos personales</strong></Parrafo>
-    <Img alt="" src={flecha} />
-    </Button>
-    <Button>
-    <Img alt="" src={compras} />
-    <Parrafo>Mis compras</Parrafo>      
-     <Img alt="" src={flecha} />
-     </Button>
-    <Button>
-    <Img alt="" src={direccion} />
-    <Parrafo>Mis direcciones</Parrafo>  
-    <Img alt="" src={flecha} />
-    </Button>
-    <Button>
-    <Img alt="" src={pagos} />
-    <Parrafo>Mis medios de pago</Parrafo>
-    <Img alt="" src={flecha} /> 
-    </Button>
-    <Button>
-    <Img alt="" src={pfavorita} />
-    <Parrafo><strong>Mis personas Favoritas </strong></Parrafo>
-    <Img alt="" src={flecha} />
-   </Button>
-    <Button>
-    <Img alt="" src={cmr} />
-    <Parrafo>Mi CMR</Parrafo>
-    <Img alt="" src={flecha} />
-    </Button>
-    <Button>
-    <Img alt="" src={giftcard} />
-    <Parrafo>Mis Gift cards</Parrafo>
-    <Img alt="" src={flecha} />
-    </Button>
-    <Button>
-    <Img alt="" src={contraseña} />
-    <Parrafo>Cambiar mi contraseña </Parrafo>
-    <Img alt="" src={flecha} />
-    </Button>
-    <Button>
-    <Img alt="" src={cerrar} />
-    <Parrafo>Cerrar sesion</Parrafo>
-     <Img alt="" src={flecha} />
-    </Button>
-    </Section>
-   </Div>
-   );
+        <Button> <Img alt="" src={datos} />
+          <Parrafo><strong>Mis datos personales</strong></Parrafo>
+          <Img alt="" src={flecha} />
+        </Button>
+        <Button>
+          <Img alt="" src={compras} />
+          <Parrafo>Mis compras</Parrafo>
+          <Img alt="" src={flecha} />
+        </Button>
+        <Button>
+          <Img alt="" src={direccion} />
+          <Parrafo>Mis direcciones</Parrafo>
+          <Img alt="" src={flecha} />
+        </Button>
+        <Button>
+          <Img alt="" src={pagos} />
+          <Parrafo>Mis medios de pago</Parrafo>
+          <Img alt="" src={flecha} />
+        </Button>
+        <Button onClick={() => {setView(1)}}>
+          <Img alt="" src={pfavorita} />
+          <Parrafo><strong>Mis personas Favoritas </strong></Parrafo>
+          <Img alt="" src={flecha} />
+        </Button>
+        <Button>
+          <Img alt="" src={cmr} />
+          <Parrafo>Mi CMR</Parrafo>
+          <Img alt="" src={flecha} />
+        </Button>
+        <Button>
+          <Img alt="" src={giftcard} />
+          <Parrafo>Mis Gift cards</Parrafo>
+          <Img alt="" src={flecha} />
+        </Button>
+        <Button>
+          <Img alt="" src={contraseña} />
+          <Parrafo>Cambiar mi contraseña </Parrafo>
+          <Img alt="" src={flecha} />
+        </Button>
+        <Button>
+          <Img alt="" src={cerrar} />
+          <Parrafo>Cerrar sesion</Parrafo>
+          <Img alt="" src={flecha} />
+        </Button>
+      </Section>
+    </Div>
+  );
 };
 export default SideBar;
-  
+
 const Div = styled.div`
 height: auto;
 width: 22vw;

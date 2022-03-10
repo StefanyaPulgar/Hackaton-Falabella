@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from "styled-components"
 
-const CreateProfile = () => {
+const CreateProfile = ({setView}) => {
     return (
         <ContainerCreate>
-            <Button>
+            <Button onClick={()=>{setView(2)}}>
                 Crear nuevo perfil
             </Button>
         </ContainerCreate>

@@ -6,23 +6,28 @@ import Header from '../layout-falabella/Header';
 import styled from "styled-components";
 import Head from './Head';
 import Main from '../profile-data/Main';
+import { useState } from "react";
 
 const Layout = () => {
+
+    const [view, setView] = useState(0);
+
+
     return (
-        
+
         <>
-       
+
             <section>
                 <Header />
                 <Head />
-                
+
             </section>
             <ContainerComponents>
                 <ContainerSidebar>
-                    <SideBar />
+                    <SideBar setView={setView}/>
                 </ContainerSidebar>
                 <ContainerEvent>
-                  <Main/>
+                    <Main view={view} setView={setView}/>
                 </ContainerEvent>
             </ContainerComponents>
 
