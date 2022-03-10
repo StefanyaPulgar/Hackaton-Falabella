@@ -43,8 +43,6 @@ const Main = ({ view, setView }) => {
   return (
     <>
     <ContainerMain>
-      {/* <pre>{JSON.stringify(profileData, null, 2)}</pre> */}
-
       {view === 1 && <div><CreateProfile setView={setView} /></div>}
 
 
@@ -63,10 +61,6 @@ const Main = ({ view, setView }) => {
 
         {showEvent && <SectionEvents><ShowEvents /></SectionEvents>}
         </div>
-        {/* <ContainerBtns>
-          <DeleteBtn>Cancelar</DeleteBtn>
-          <CreateProfileBtn onClick={() => functionBtn()}>Crear perfil</CreateProfileBtn>
-        </ContainerBtns> */}
       </div>}
 
       {view === 3 && <div><ShowProfiles /></div>}

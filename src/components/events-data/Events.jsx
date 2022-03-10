@@ -1,22 +1,9 @@
 // import React, { useState } from 'react'
 import styled from 'styled-components'
 // import { ShowEvents } from './ShowEvents'
-import { Link } from "react-router-dom";
-import changeComponent from '../layout-falabella/prueba';
 
 
 export const Event = ({ setShowEvent }) => {
-
-    // const [stateEvent, setStateEvent] = useState(false);
-
-    // const changeComponent = (option) => {
-    //     switch(option) {
-    //         case "principal": 
-    //         return <Event/>;
-    //         case "evento":
-    //         return <BasicData/>
-    //     }
-    // }
 
     return (
         <>
@@ -25,10 +12,9 @@ export const Event = ({ setShowEvent }) => {
                 <h1>Eventos e intereses</h1>
                 <AddEvent>
                     <h3>Agrega un evento para tu persona favorita</h3>
-                    {/* <Link to="/event"> */}
+
                     <ButtonEvent onClick={() => setShowEvent(true)} >Agregar evento</ButtonEvent>
 
-                    {/* </Link> */}
                 </AddEvent>
             </EventContainer>
 

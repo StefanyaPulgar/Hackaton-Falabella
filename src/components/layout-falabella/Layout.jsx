@@ -1,7 +1,5 @@
 import React from 'react'
-// import { Event } from '..//events-data/Events'
 import SideBar from '../layout-falabella/SideBar';
-// import BasicData from '../profile-data/BasicData';
 import Header from '../layout-falabella/Header';
 import styled from "styled-components";
 import Head from './Head';
@@ -48,15 +46,3 @@ const ContainerEvent = styled.section`
 grid-template-rows: 1.5fr 1fr ;
 
 `
-
-const ContainerBasicdata = styled.section`
-position:static;
-margin-left: 2vw;
-`
-
-const ContainerNewEvent = styled.section`
-margin-top:2vh;
-position:static;
-margin-left: 2vw;
-`
-

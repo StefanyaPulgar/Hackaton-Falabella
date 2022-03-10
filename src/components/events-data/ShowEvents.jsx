@@ -20,9 +20,6 @@ export const ShowEvents = ({ eventData, setEventData, addData}) => {
               <img src={calendario} alt="Calendario" />
               <h3>Agregar celebracion</h3>
             </ContainerCelebration>
-            {/* <ArrowUp>
-              <img src={arrowUp} alt="Up" />
-            </ArrowUp> */}
           </AddCelebration>
           <section>
             <Titles>Estamos celebrando:</Titles>

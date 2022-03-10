@@ -15,15 +15,6 @@ const CreateProfile = ({setView}) => {
 
 export default CreateProfile;
 
-// const DivContainer = styled.div`
-// display:flex;
-// justify:center;
-// width:100%;
-// height: 100%;
-// align-items:center;
-// background:green;
-// `
-
 const ContainerCreate = styled.section`
 width: 62.2vw;
 height: 60vh;
