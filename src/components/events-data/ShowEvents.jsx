@@ -9,7 +9,7 @@ import fechaEspecial from "../../icons/specialdate.svg";
 import arrowUp from "../../icons/up.svg";
 import calendario from "../../icons/calendar.svg";
 
-export const ShowEvents = ({eventData, setEventData, addData }) => {
+export const ShowEvents = ({ eventData, setEventData, addData, }) => {
   return (
     <EventContainer>
       <h1>Eventos e intereses</h1>
@@ -18,75 +18,75 @@ export const ShowEvents = ({eventData, setEventData, addData }) => {
           <AddCelebration>
             <ContainerCelebration>
 
-              <img src={calendario} alt="Calendario"/>
+              <img src={calendario} alt="Calendario" />
               <h3>Agregar celebracion</h3>
             </ContainerCelebration>
             <ArrowUp>
-              <img src={arrowUp} alt="Up"/>
+              <img src={arrowUp} alt="Up" />
             </ArrowUp>
           </AddCelebration>
           <section>
             <Titles>Estamos celebrando:</Titles>
             <AllContainerIcons>
-            <ContainerIcons onClick={()=> setEventData({...eventData, evento: "Cumpleaños"})}>
-              <img src={cumpleaños} alt="Cumpleaños"/>
-              <span>Cumpleaños</span>
-            </ContainerIcons>
-            <ContainerIcons onClick={()=> setEventData({...eventData, evento: "Aniversario"})}>
-              <img src={aniversario} alt="Aniversario"/>
-              <span>Aniversario</span>
-            </ContainerIcons>
-            <ContainerIcons onClick={()=> setEventData({...eventData, evento: "Navidad"})}>
-              <img src={navidad} alt="Navidad"/>
-              <span>Navidad</span>
-            </ContainerIcons>
-            <ContainerIcons onClick={()=> setEventData({...eventData, evento: "Vacaciones"})}>
-              <img src={vacaciones} alt="Vacaciones"/>
-              <span>Vacaciones</span>
-            </ContainerIcons>
-            <ContainerIcons onClick={()=> setEventData({...eventData, evento: "Fiestas patrias"})}>
-              <img src={fpatria} alt="Fiestas patrias" />
-              <span>18 de Sept.</span>
-            </ContainerIcons>
-            <ContainerIcons onClick={()=> setEventData({...eventData, evento: "Fecha especial "})}>
-              <img src={fechaEspecial} alt="Fecha especial"/>
-              <span>Fecha especial</span>
-            </ContainerIcons>
+              <ContainerIcons onClick={() => setEventData({ ...eventData, evento: "Cumpleaños" })}>
+                <img src={cumpleaños} alt="Cumpleaños" />
+                <span>Cumpleaños</span>
+              </ContainerIcons>
+              <ContainerIcons onClick={() => setEventData({ ...eventData, evento: "Aniversario" })}>
+                <img src={aniversario} alt="Aniversario" />
+                <span>Aniversario</span>
+              </ContainerIcons>
+              <ContainerIcons onClick={() => setEventData({ ...eventData, evento: "Navidad" })}>
+                <img src={navidad} alt="Navidad" />
+                <span>Navidad</span>
+              </ContainerIcons>
+              <ContainerIcons onClick={() => setEventData({ ...eventData, evento: "Vacaciones" })}>
+                <img src={vacaciones} alt="Vacaciones" />
+                <span>Vacaciones</span>
+              </ContainerIcons>
+              <ContainerIcons onClick={() => setEventData({ ...eventData, evento: "Fiestas patrias" })}>
+                <img src={fpatria} alt="Fiestas patrias" />
+                <span>18 de Sept.</span>
+              </ContainerIcons>
+              <ContainerIcons onClick={() => setEventData({ ...eventData, evento: "Fecha especial " })}>
+                <img src={fechaEspecial} alt="Fecha especial" />
+                <span>Fecha especial</span>
+              </ContainerIcons>
 
             </AllContainerIcons>
-           
+
           </section>
-        
 
-        <AllContainerIntereses>
-     <Titles> Mis intereses son:</Titles>
-       <ContainerIntereses>
-         <Button  onClick={()=> setEventData({...eventData, intereses: "ROPA"})}>ROPA</Button>
-         <Button onClick={()=> setEventData({...eventData, intereses: "PERFUMES"})}>PERFUMES</Button>
-         <Button onClick={()=> setEventData({...eventData, intereses: "ZAPATILLAS"})}>ZAPATILLAS</Button>
-         <Button onClick={()=> setEventData({...eventData, intereses: "JUGUETES"})}>JUGUETES</Button>
-         <Button onClick={()=> setEventData({...eventData, intereses: "TECNOLOGIA"})}>TECNOLOGIA</Button>
-         <Button onClick={()=> setEventData({...eventData, intereses: "LIVING"})}>LIVING</Button>
-         <Button onClick={()=> setEventData({...eventData, intereses: "ACCESORIOS"})}>ACCESORIOS</Button>
-         <Button onClick={()=> setEventData({...eventData, intereses: "ARTICULOS DE BELLEZA"})}>ARTICULOS DE BELLEZA</Button>
-         <Button onClick={()=> setEventData({...eventData, intereses: "DECOHOGAR"})}>DECOHOGAR</Button>
-         <Button onClick={()=> setEventData({...eventData, intereses: "OTRA ¿CUAL?"})} >OTRA ¿CUAL?</Button>
-       </ContainerIntereses>
-    </AllContainerIntereses>
 
-    <AllContainerIntereses>
-     <Titles>Quiero recibir sugerencias de regalo</Titles>
-       <ContainerIntereses>
-         <Button onClick={()=> setEventData({...eventData, notificacion: "15 días antes"})}>15 días antes</Button>
-         <Button onClick={()=> setEventData({...eventData, notificacion: "20 días antes"})}>20 días antes</Button>
-         <Button onClick={()=> setEventData({...eventData, notificacion: "1 mes antes"})}>1 mes antes</Button>
-         </ContainerIntereses>
-    </AllContainerIntereses>
-    </ContainerEvent>
-    <ItemButton>
-        <h3>Cancelar</h3>
-        <ButtonEvent onClick={addData} >Agregar evento</ButtonEvent>
-    </ItemButton>
+          <AllContainerIntereses>
+            <Titles> Mis intereses son:</Titles>
+            <ContainerIntereses>
+              <Button onClick={() => setEventData({ ...eventData, intereses: "ROPA" })}>ROPA</Button>
+              <Button onClick={() => setEventData({ ...eventData, intereses: "PERFUMES" })}>PERFUMES</Button>
+              <Button onClick={() => setEventData({ ...eventData, intereses: "ZAPATILLAS" })}>ZAPATILLAS</Button>
+              <Button onClick={() => setEventData({ ...eventData, intereses: "JUGUETES" })}>JUGUETES</Button>
+              <Button onClick={() => setEventData({ ...eventData, intereses: "TECNOLOGIA" })}>TECNOLOGIA</Button>
+              <Button onClick={() => setEventData({ ...eventData, intereses: "LIVING" })}>LIVING</Button>
+              <Button onClick={() => setEventData({ ...eventData, intereses: "ACCESORIOS" })}>ACCESORIOS</Button>
+              <Button onClick={() => setEventData({ ...eventData, intereses: "ARTICULOS DE BELLEZA" })}>ARTICULOS DE BELLEZA</Button>
+              <Button onClick={() => setEventData({ ...eventData, intereses: "DECOHOGAR" })}>DECOHOGAR</Button>
+              <Button onClick={() => setEventData({ ...eventData, intereses: "OTRA ¿CUAL?" })} >OTRA ¿CUAL?</Button>
+            </ContainerIntereses>
+          </AllContainerIntereses>
+
+          <AllContainerIntereses>
+            <Titles>Quiero recibir sugerencias de regalo</Titles>
+            <ContainerIntereses>
+              <Button onClick={() => setEventData({ ...eventData, notificacion: "15 días antes" })}>15 días antes</Button>
+              <Button onClick={() => setEventData({ ...eventData, notificacion: "20 días antes" })}>20 días antes</Button>
+              <Button onClick={() => setEventData({ ...eventData, notificacion: "1 mes antes" })}>1 mes antes</Button>
+            </ContainerIntereses>
+          </AllContainerIntereses>
+        </ContainerEvent>
+        <ItemButton>
+          <h3>Cancelar</h3>
+          <ButtonEvent onClick={addData} >Agregar evento</ButtonEvent>
+        </ItemButton>
       </AddEvent>
     </EventContainer>
   );
