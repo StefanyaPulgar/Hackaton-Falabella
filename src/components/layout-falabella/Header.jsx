@@ -22,10 +22,12 @@ const Header = () => {
             </ContainerMenu>
 
             <Search>
+                <I>
                 <DropdownSearch>Todas
                 </DropdownSearch>
                 <SearchInput type="text" placeholder="¿Qué buscas?"></SearchInput>
                 <Button><img src={lupe} alt=""/></Button>
+                </I>
             </Search>
 
             <ContainerOptions>
@@ -38,9 +40,9 @@ const Header = () => {
                     <span>compras</span>
                 </UserA>
             </ContainerA>
-            <dontainerAv>
+            <ContainerA>
                 <a href="/"><img src={cart} alt="" /></a>
-            </dontainerAv>
+            </ContainerA>
             </ContainerOptions>
 
         </ContainerHeader>
@@ -108,14 +110,27 @@ const Search = styled.div`
 display:flex;
 margin: 0% 1% 0% 6%;
 align-items:center;
+width: 30.625vw;
 `
+
+const I = styled.div`
+display: flex;
+height: 100%;
+justify-content: center;
+align-items: center;
+border-radius: 35px;
+background: white;
+width: 100%;
+`;
+
+
 const SearchInput = styled.input`
 font-family: Lato;
 font-style: normal;
 font-weight: normal;
 font-size: 1rem;
-width: 38vw;
-height: 6vh;
+width: 100%;
+height: 100%;
 border-radius: 0px 35px 35px 0px;
 border: none;
 outline: none;
@@ -139,6 +154,7 @@ outline: none;
 border-radius: 35px;
 width: 3.95vw;
 background: #495867;
+height: 6.5vh;
 `
 const UserA = styled.div`
 display: flex;
