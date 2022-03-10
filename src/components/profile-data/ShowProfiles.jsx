@@ -10,12 +10,7 @@ import { useEffect, useState } from "react";
     useEffect(() => {
         const q = query(collection(db, "dates"));
         onSnapshot(q, (snapshot) => {
-          //console.log('se ejecuto snapshot')
-          // console.log(snapshot.docs[0].data());
           const listData = snapshot.docs.map((documento) => {
-            //aplico map a todos los elementos de la coleccion
-            //por cada elemento de la base de dato quiero que me devuelva
-            //y guardes en el arreglo un objeto, documento.data y un id 
             return { ...documento.data(), id: documento.id }
     
           })

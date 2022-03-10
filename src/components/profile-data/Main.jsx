@@ -2,7 +2,7 @@ import React from 'react'
 import BasicData from './BasicData';
 import { useState } from "react";
 import { db } from "../../firebase/firebase";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, doc , deleteDoc } from "firebase/firestore";
 import { ShowEvents } from '../events-data/ShowEvents';
 
 
@@ -26,6 +26,10 @@ const Main = () => {
             console.error('Error adding document: ', e);
         }
         setProfileData({});
+
+        const deleteDoc = async (id) => {
+           await deleteDoc(doc(db, 'dates' , id));
+        }
 
 
     };
