@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import changeComponent from '../layout-falabella/prueba';
 
 
-export const Event = () => {
+export const Event = ({ setShowEvent }) => {
 
     // const [stateEvent, setStateEvent] = useState(false);
 
@@ -21,16 +21,16 @@ export const Event = () => {
     return (
         <>
 
-        <EventContainer>
-        <h1>Eventos e intereses</h1>
-            <AddEvent>
-                <h3>Agrega un evento para tu persona favorita</h3>
+            <EventContainer>
+                <h1>Eventos e intereses</h1>
+                <AddEvent>
+                    <h3>Agrega un evento para tu persona favorita</h3>
                     {/* <Link to="/event"> */}
-                      <ButtonEvent >Agregar evento</ButtonEvent>
+                    <ButtonEvent onClick={() => setShowEvent(true)} >Agregar evento</ButtonEvent>
 
                     {/* </Link> */}
-            </AddEvent>
-        </EventContainer>
+                </AddEvent>
+            </EventContainer>
 
         </>
     )
