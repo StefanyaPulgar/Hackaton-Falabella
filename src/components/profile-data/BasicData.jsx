@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from 'styled-components'
 import accountIcon from "./icons/accountIcon.svg"
 import React from 'react';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
@@ -13,10 +13,6 @@ import {
 
 const BasicData = ({setProfileData, profileData}) => {
     
-    
-
- 
-
     return (
         <ContainerProfile>
             <H2>Mi persona Favorita</H2>
@@ -35,8 +31,8 @@ const BasicData = ({setProfileData, profileData}) => {
                 </P>
                 <P>Es mi</P>
                 <ContainerImgData>
-                <Button onClick={()=> setProfileData({...profileData, parentesco: "MAMÁ"})}>MAMÁ</Button>
-                <Button  onClick={()=> setProfileData({...profileData, parentesco: "PAPÁ"})}>PAPÁ</Button>
+                <Button onClick={()=> setProfileData({...profileData, parentesco: "MAMÁ", }) }>MAMÁ</Button>
+                <Button onClick={()=> setProfileData({...profileData, parentesco: "PAPÁ"})}>PAPÁ</Button>
                 <Button  onClick={()=> setProfileData({...profileData, parentesco: "FAMILIAR"})}>FAMILIAR</Button>
                 <Button  onClick={()=> setProfileData({...profileData, parentesco: "PAREJA"})}>PAREJA</Button>
                 <Button  onClick={()=> setProfileData({...profileData, parentesco: "OTRO"})}>OTRO, ¿CUÁL?</Button>
@@ -148,4 +144,10 @@ cursor: pointer;
 border: 0.86px solid #E0E0E0;
 box-sizing: border-box;
 border-radius: 4.28px;
+
+${props => props.primary && css `
+border: 1px solid #FF6200;
+background: rgba(255, 98, 0, 0.05);
+
+`}
 `;

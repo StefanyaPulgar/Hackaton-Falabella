@@ -14,9 +14,6 @@ const Main = ({ view, setView }) => {
 
   const [profileData, setProfileData] = useState({});
   const [eventData, setEventData] = useState({});
-
-  // const [view, setView] = useState(1);
-
   const [showEvent, setShowEvent] = useState(false);
 
   const addData = async (e) => {
@@ -44,6 +41,13 @@ const Main = ({ view, setView }) => {
   }
   return (
     <main>
+     
+
+      {view === 1 && <div><CreateProfile setView={setView} /></div>}
+
+
+      {view === 2 && <div>
+
         <BasicData
           setProfileData={setProfileData}
           profileData={profileData} />
@@ -63,6 +67,7 @@ const Main = ({ view, setView }) => {
       </div>}
 
 
+
       {/* { (view !== 3 && view !== 0) && <ContainerBtns>
         <DeleteBtn>Cancelar</DeleteBtn>
         <CreateProfileBtn onClick={() => functionBtn()}>Crear perfil</CreateProfileBtn>
@@ -72,6 +77,7 @@ const Main = ({ view, setView }) => {
 
     </main >
   )
+
 }
 
 const ContainerBtns = styled.div`
@@ -79,7 +85,6 @@ display:flex;
 justify-content:flex-end;
 background: #FFFFFF;
 box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.2);
-// width: 68vw;
 width: 50%;
 height: 16vh;
 align-items: center;
@@ -100,7 +105,6 @@ margin-right: 2%;
 
 &:hover  {
   color: #FF6200;
-  // display: none;
 }
 `
 const CreateProfileBtn = styled.button`
@@ -124,7 +128,6 @@ color: #FFFFFF;
 
 &:hover  {
   background: #FF6200;
-  // display: none;
 }
 `
 
