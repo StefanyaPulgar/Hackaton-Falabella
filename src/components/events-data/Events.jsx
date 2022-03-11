@@ -1,6 +1,4 @@
-// import React, { useState } from 'react'
 import styled from 'styled-components'
-// import { ShowEvents } from './ShowEvents'
 
 
 export const Event = ({ setShowEvent }) => {
@@ -25,8 +23,6 @@ export const Event = ({ setShowEvent }) => {
 const EventContainer = styled.section`
 display: flex;
 flex-direction: column;
-// position: absolute;
-// width: 65.2vw;
 width: 100%;
 height: auto;
 background: #FFFFFF;
@@ -63,6 +59,5 @@ margin-bottom:2vh ;
 
 &:hover  {
     background: #FF6200;
-    // display: none;
 }
 `;

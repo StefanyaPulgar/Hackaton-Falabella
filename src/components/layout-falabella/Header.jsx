@@ -155,6 +155,11 @@ border-radius: 35px;
 width: 3.95vw;
 background: #495867;
 height: 6.5vh;
+
+cursor: pointer;
+&:hover  {
+    color: #FF6200;
+}
 `
 
 const ContainerA = styled.div`

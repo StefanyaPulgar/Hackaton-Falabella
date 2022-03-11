@@ -86,7 +86,6 @@ justify-content: flex-start ;
 const Button = styled.button`
 display:inline-flex;
 width:100%;
-/* grid-template-columns:0.5fr 5fr 0.5fr ; */
 justify-content:flex-start ;
 align-items:center ;
 background:none;
@@ -98,6 +97,10 @@ font-style: normal;
 font-weight: normal;
 font-size: 1.2vw;
 background: #ffffff;
+cursor: pointer;
+&:hover  {
+  color: #FF6200;
+}
 `
 const Img = styled.img`
 
