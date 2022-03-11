@@ -9,6 +9,7 @@ import {
 } from 'react-day-picker/moment';
 
 
+
 // import {Link} from "react-router-dom";
 
 const BasicData = ({setProfileData, profileData}) => {
@@ -31,17 +32,17 @@ const BasicData = ({setProfileData, profileData}) => {
                 </P>
                 <P>Es mi</P>
                 <ContainerImgData>
-                <Button onClick={()=> setProfileData({...profileData, parentesco: "MAMÁ", }) }>MAMÁ</Button>
-                <Button onClick={()=> setProfileData({...profileData, parentesco: "PAPÁ"})}>PAPÁ</Button>
-                <Button  onClick={()=> setProfileData({...profileData, parentesco: "FAMILIAR"})}>FAMILIAR</Button>
-                <Button  onClick={()=> setProfileData({...profileData, parentesco: "PAREJA"})}>PAREJA</Button>
-                <Button  onClick={()=> setProfileData({...profileData, parentesco: "OTRO"})}>OTRO, ¿CUÁL?</Button>
+                <Button primary={profileData.parentesco === "MAMÁ"} onClick={()=> setProfileData({...profileData, parentesco: "MAMÁ"})}>MAMÁ </Button>
+                <Button  primary={profileData.parentesco === "PAPÁ"} onClick={()=> setProfileData({...profileData, parentesco: "PAPÁ"})}>PAPÁ</Button>
+                <Button  primary={profileData.parentesco === "FAMILIAR"} onClick={()=> setProfileData({...profileData, parentesco: "FAMILIAR"})}>FAMILIAR</Button>
+                <Button  primary={profileData.parentesco === "PAREJA"} onClick={()=> setProfileData({...profileData, parentesco: "PAREJA"})}>PAREJA</Button>
+                <Button  primary={profileData.parentesco === "OTRO"} onClick={()=> setProfileData({...profileData, parentesco: "OTRO"})}>OTRO, ¿CUÁL?</Button>
                 </ContainerImgData>
                 <P>Género</P>
                 <ContainerImgData>
-                    <Button  onClick={()=> setProfileData({...profileData, genero : "MUJER"})}>MUJER</Button>
-                    <Button  onClick={()=> setProfileData({...profileData, genero : "HOMBRE"})}>HOMBRE</Button>
-                    <Button  onClick={()=> setProfileData({...profileData, genero : "NO BINARIO"})}>NO BINARIO</Button>
+                <Button primary={profileData.genero ==="MUJER"}  onClick={()=> setProfileData({...profileData, genero : "MUJER"})}>MUJER</Button>
+                    <Button primary={profileData.genero === "HOMBRE"}  onClick={()=> setProfileData({...profileData, genero : "HOMBRE"})}>HOMBRE</Button>
+                    <Button primary={profileData.genero === "NO BINARIO"}  onClick={()=> setProfileData({...profileData, genero : "NO BINARIO"})}>NO BINARIO</Button>
                     <P>Su fecha de nacimiento es el: <DayPickerInput
                         value={profileData.fecha}
                         onDayChange={(day)=> setProfileData({...profileData , fecha: day})}
@@ -86,17 +87,19 @@ color: #68717D;
 `
 const ContainerProfile = styled.div`
 background: #FFFFFF;
+// background:blue;
 box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.2);
-width: 62.2vw;
-height: 44vh;
-/* left: 421px;
-top: 265px; */
+// height: 44vh;
+width:65vw;
+height: 75%;
 padding:2%;
+// margin: 0.5%;
 `
 const ContainerBasicData = styled.div`
 background: #FBFBFB;
-width: 59vw;
-height: 30vh;
+// background: pink;
+width: 95%;
+// height: 30vh;
 padding: 2%;
 margin-top:1vh;
 `
@@ -110,8 +113,9 @@ font-style: normal;
 font-weight: normal;
 font-size: 16px;
 color: #333333;
-width: 97px;
-height: 16px;
+// width: 97px;
+// height: 16px;
+width: 100%;
 
 `
 const Input = styled.input`
@@ -120,10 +124,9 @@ outline: none;
 border-bottom: 0.5px solid #BBBBBB;
 background: transparent;
 font-size: 2.46vh;
-  ::-webkit-input-placeholder {
+::-webkit-input-placeholder {
     font-size: 1.5vw;
-  }
-  
+}
 `
 const Button = styled.button`
 text-align: center;
