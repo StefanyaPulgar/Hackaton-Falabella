@@ -173,9 +173,7 @@ img {
     left:1.2vw;
 }
 span{
-    // position: absolute;
 font-size: 0.7vw;
-// bottom: 18.4vh;
 }
 
 ${props => props.secondary && css `

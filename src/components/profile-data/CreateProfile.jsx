@@ -33,7 +33,7 @@ outline: none;
 width: 14vw;
 color: #FFFFFF;
 cursor: pointer;
-background: #BBBBBB;
+background: #FF6200;
 border-radius: 24px;
 margin:2%;
 
@@ -41,10 +41,4 @@ font-family: 'Lato';
 font-style: normal;
 font-weight: 700;
 font-size: 1rem;
-
-color: #FFFFFF;
-&:hover  {
-    background: #FF6200;
-    // display: none;
-}
 `
