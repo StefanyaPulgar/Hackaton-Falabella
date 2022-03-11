@@ -44,16 +44,12 @@ const ShowProfiles = () => {
     <ContainerShowProfiles>
       <ContainerHs>
       <h2>Mis personas favoritas</h2>
-      <h3>Revisa los eventos que tienen:</h3>
+      <h3>Revisa los eventos que tienes:</h3>
       </ContainerHs>
-      <DivInput>
-        <Checkboxes type="checkbox" value="" ></Checkboxes><label>Seleccionar todo</label>
-      </DivInput>
 
       <ContainerBtnMap>
         {data.map((documento, index) => (
           <DivDataProfile key={index} >
-            <Checkboxes type="checkbox" value=""></Checkboxes>
             <ContainerTitles>
               <Name>{documento.profile.nombre}</Name>
               <EventName>{documento.events.evento}</EventName>
@@ -75,29 +71,22 @@ const ContainerShowProfiles = styled.div`
   font-family: Lato;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
   color: #333333;
   }
-
   box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.2);
   background: #FFFFFF;
-  width: 68vw;
-
-}
+  width: 65vw;
+  margin-left: 14vw;
+  margin-top: vh;
 `
 
 const ContainerHs = styled.div`
-margin-top: 0%;
-background:transparent;
+padding-top: 1vh;
+margin-left: 2vw;
+h3 {
+  font-weight: 1.25rem;
+}
 `
-
-const Checkboxes = styled.input`
-  height: 1.5vw;
-  width: 1.5vw;
-  background: transparent;
-  border: 1px #BFC4C9 solid;
-  margin-right: 4px;
-  `
 
 const ContainerBtnMap = styled.div`
 display:flex;
@@ -105,19 +94,6 @@ flex-direction:column;
 align-items: center;
 margin: 2% 0% 2% 0%;
 background:transparent;
-`
-
-const DivInput = styled.div`
-display:flex;
-align-items:center;
-margin-left: 11%;
-
-font-family: Lato;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-color: #333333;
-
 `
 
 const DivDataProfile = styled.div`
@@ -169,6 +145,9 @@ outline: none;
 Background:transparent;
 cursor: pointer;
 margin-right: 1%;
+&:hover  {
+  color: #FF6200;
+}
 `
 const EditBtn = styled.button`
 background: #495867;
@@ -179,4 +158,7 @@ outline: none;
 width: 14vw;
 color: #FFFFFF;
 cursor: pointer;
+&:hover  {
+  background: #FF6200;
+}
 `

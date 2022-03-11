@@ -31,8 +31,7 @@ const Main = ({ view, setView }) => {
       console.error('Error adding document: ', e);
     }
     setProfileData({});
-
-
+    setEventData({});
   };
 
   const functionBtn = (e) => {
@@ -49,17 +48,16 @@ const Main = ({ view, setView }) => {
       {view === 2 && <div>
 
         <div><SectionProfile><BasicData
+        setView={setView}
           setProfileData={setProfileData}
           profileData={profileData} /></SectionProfile>
 
         {showEvent === false &&
           <SectionEventBtn><Event setShowEvent={setShowEvent}
-            eventData={eventData}
-            setEventData={setEventData}
-            addData={addData}
           /> </SectionEventBtn>}
 
-        {showEvent && <SectionEvents><ShowEvents /></SectionEvents>}
+        {showEvent && <SectionEvents><ShowEvents addData={addData} eventData={eventData}
+            setEventData={setEventData}/></SectionEvents>}
         </div>
       </div>}
 
@@ -69,7 +67,7 @@ const Main = ({ view, setView }) => {
     </ContainerMain >
     <ContainerBtns>
           <DeleteBtn>Cancelar</DeleteBtn>
-          <CreateProfileBtn onClick={(e) => functionBtn(e)}>Crear perfil</CreateProfileBtn>
+          <CreateProfileBtn onClick={(e)=> functionBtn(e)}>Crear perfil</CreateProfileBtn>
         </ContainerBtns>
     </>
     
@@ -130,7 +128,6 @@ margin-right: 2%;
 
 &:hover  {
   color: #FF6200;
-  // display: none;
 }
 `
 const CreateProfileBtn = styled.button`
@@ -154,7 +151,6 @@ color: #FFFFFF;
 
 &:hover  {
   background: #FF6200;
-  // display: none;
 }
 `
 
