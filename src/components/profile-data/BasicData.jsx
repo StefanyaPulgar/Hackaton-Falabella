@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import accountIcon from "./icons/accountIcon.svg"
 import React from 'react';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
@@ -8,49 +8,58 @@ import {
     parseDate,
 } from 'react-day-picker/moment';
 
-// import {Link} from "react-router-dom";
-
-const BasicData = () => {
+const BasicData = ({ setProfileData, profileData, setView }) => {
 
     return (
         <ContainerProfile>
             <H2>Mi persona Favorita</H2>
-            <Back href="">Volver a personas favoritas</Back>
+            <Back onClick={()=>{setView(3)}}> Volver a personas favoritas</Back>
             <ContainerBasicData>
                 <ContainerImgData>
-                <img alt="" src={accountIcon}></img><H3>Datos básicos</H3>
+                    <img alt="" src={accountIcon}></img><H3>Datos básicos</H3>
                 </ContainerImgData>
-                <P>Su nombre es <Input type="text" placeholder="Escribe su nombre"></Input></P>
+                <P>Su nombre es <Input
+                    type="text"
+                    name="nombre"
+                    value={profileData.nombre}
+                    onChange={(e) => setProfileData({ ...profileData, nombre: e.target.value })}
+                    placeholder="Escribe su nombre"></Input>
+
+                </P>
                 <P>Es mi</P>
                 <ContainerImgData>
-                <Button>MAMÁ</Button>
-                <Button>PAPÁ</Button>
-                <Button>FAMILIAR</Button>
-                <Button>PAREJA</Button>
-                <Button>OTRO, ¿CUÁL?</Button>
+                    <Button primary={profileData.parentesco === "MAMÁ"} onClick={() => setProfileData({ ...profileData, parentesco: "MAMÁ" })}>MAMÁ </Button>
+                    <Button primary={profileData.parentesco === "PAPÁ"} onClick={() => setProfileData({ ...profileData, parentesco: "PAPÁ" })}>PAPÁ</Button>
+                    <Button primary={profileData.parentesco === "FAMILIAR"} onClick={() => setProfileData({ ...profileData, parentesco: "FAMILIAR" })}>FAMILIAR</Button>
+                    <Button primary={profileData.parentesco === "PAREJA"} onClick={() => setProfileData({ ...profileData, parentesco: "PAREJA" })}>PAREJA</Button>
+                    <Button primary={profileData.parentesco === "AMISTAD"} onClick={() => setProfileData({ ...profileData, parentesco: "AMISTAD" })}>AMISTAD</Button>
+                    <Button primary={profileData.parentesco === "OTRO"} onClick={() => setProfileData({ ...profileData, parentesco: "OTRO" })}>OTRO</Button>
                 </ContainerImgData>
                 <P>Género</P>
                 <ContainerImgData>
-                    <Button>MUJER</Button>
-                    <Button>HOMBRE</Button>
-                    <Button>NO BINARIO</Button>
-                    <P>Su fecha de nacimiento es el: <DayPickerInput
+                    <Button primary={profileData.genero === "MUJER"} onClick={() => setProfileData({ ...profileData, genero: "MUJER" })}>MUJER</Button>
+                    <Button primary={profileData.genero === "HOMBRE"} onClick={() => setProfileData({ ...profileData, genero: "HOMBRE" })}>HOMBRE</Button>
+                    <Button primary={profileData.genero === "NO BINARIO"} onClick={() => setProfileData({ ...profileData, genero: "NO BINARIO" })}>NO BINARIO</Button>
+                    <ContainerDayPicker><P>Su fecha de nacimiento es el: 
+                    </P><DayPickerInput
+                        value={profileData.fecha}
+                        onDayChange={(day) => setProfileData({ ...profileData, fecha: day })}
                         formatDate={formatDate}
                         parseDate={parseDate}
-                        placeholder={`${formatDate(new Date())}`} /></P>
+                        placeholder={`${formatDate(new Date())}`} /></ContainerDayPicker>
                 </ContainerImgData>
             </ContainerBasicData>
         </ContainerProfile>
     );
 }
-
 export default BasicData;
 
 const P = styled.p`
 font-family: 'Lato', sans-serif;
 font-weight: normal;
-font-size: 16px;
+font-size: 0.8rem;
 color: #333333;
+margin-right: 1%;
 `;
 
 const H2 = styled.h2`
@@ -70,27 +79,35 @@ line-height: 29px;
 
 const Back = styled.a`
 font-family: 'Lato', sans-serif;
-font-size: 14px;
+font-size: 0,875rem;
 color: #68717D;
+cursor:pointer;
+&:hover  {
+    color: #FF6200;
+}
 `
 const ContainerProfile = styled.div`
 background: #FFFFFF;
 box-shadow: 0px 0px 4px rgba(51, 51, 51, 0.2);
-width: 62.2vw;
-height: 44vh;
-/* left: 421px;
-top: 265px; */
+width:65vw;
+height: 75%;
 padding:2%;
+
 `
 const ContainerBasicData = styled.div`
 background: #FBFBFB;
-width: 59vw;
-height: 30vh;
+width: 95%;
 padding: 2%;
 margin-top:1vh;
 `
 const ContainerImgData = styled.div`
 display: flex;
+align-items:center;
+`
+const ContainerDayPicker = styled.div`
+display:flex;
+align-items:center;
+width:100%;
 `
 
 const H3 = styled.h3`
@@ -99,8 +116,7 @@ font-style: normal;
 font-weight: normal;
 font-size: 16px;
 color: #333333;
-width: 97px;
-height: 16px;
+width: 100%;
 
 `
 const Input = styled.input`
@@ -108,11 +124,11 @@ border: none;
 outline: none;
 border-bottom: 0.5px solid #BBBBBB;
 background: transparent;
-font-size: 2.46vh;
-  ::-webkit-input-placeholder {
-    font-size: 1.5vw;
-  }
-  
+color: #333333;
+font-family: 'Lato';
+font-style: normal;
+font-weight: 400;
+font-size: 0,875rem;
 `
 const Button = styled.button`
 text-align: center;
@@ -133,7 +149,13 @@ cursor: pointer;
 border: 0.86px solid #E0E0E0;
 box-sizing: border-box;
 border-radius: 4.28px;
-`
-// const DayPickerInput = styled.p`
-// border:none;
-// `
+
+&:hover  {
+    color: #FF6200;
+}
+
+${props => props.primary && css`
+border: 1px solid #FF6200;
+background: rgba(255, 98, 0, 0.05);
+`}
+`;

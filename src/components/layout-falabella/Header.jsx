@@ -5,7 +5,7 @@ import cart from "./assets/cart.svg";
 import fill from "../../icons/fill.svg";
 import arrow from "../../icons/arrowdown.svg";
 import menu from "../../icons/menu.svg";
-
+import arrowHeader from "../../icons/arrow-filter.svg";
 
 const Header = () => {
     return (
@@ -22,25 +22,25 @@ const Header = () => {
             </ContainerMenu>
 
             <Search>
+                <I>
                 <DropdownSearch>Todas
                 </DropdownSearch>
                 <SearchInput type="text" placeholder="¿Qué buscas?"></SearchInput>
                 <Button><img src={lupe} alt=""/></Button>
+                </I>
             </Search>
 
             <ContainerOptions>
-            <ContainerA>
-                <UserA href=""><span>Hola</span>
-                    <span>Inicia Sesión</span> </UserA>
+            <ContainerA href="">
+            <p>Hola<br/>Inicia sesion <img src={arrowHeader} alt=""/></p> 
+  
             </ContainerA>
             <ContainerA>
-                <UserA href=""><span>Mis</span>
-                    <span>compras</span>
-                </UserA>
+            <P>Mis<br/>Compras</P> 
             </ContainerA>
-            <dontainerAv>
+            <ContainerA>
                 <a href="/"><img src={cart} alt="" /></a>
-            </dontainerAv>
+            </ContainerA>
             </ContainerOptions>
 
         </ContainerHeader>
@@ -97,25 +97,40 @@ font-weight: bold;
 font-size: 1.3rem;
 color: #FFFFFF;
 cursor: pointer;
+
 `
 const ContainerMenu = styled.div`
 display:flex;
 align-items: center;
 justify-content: space-between;
 width:4%;
+margin-right: 2vw;
 `
 const Search = styled.div`
 display:flex;
 margin: 0% 1% 0% 6%;
 align-items:center;
+width: 52vw;
 `
+
+const I = styled.div`
+display: flex;
+height: 100%;
+justify-content: center;
+align-items: center;
+border-radius: 35px;
+background: white;
+width: 100%;
+`;
+
+
 const SearchInput = styled.input`
 font-family: Lato;
 font-style: normal;
 font-weight: normal;
 font-size: 1rem;
-width: 38vw;
-height: 6vh;
+width: 100%;
+height: 100%;
 border-radius: 0px 35px 35px 0px;
 border: none;
 outline: none;
@@ -139,8 +154,18 @@ outline: none;
 border-radius: 35px;
 width: 3.95vw;
 background: #495867;
+height: 6.5vh;
+
+cursor: pointer;
+&:hover  {
+    color: #FF6200;
+}
 `
-const UserA = styled.div`
+
+const ContainerA = styled.div`
+// width: 4.875vw
+// height: 4.95vh;
+height: 100%;
 display: flex;
 flex-direction: column;
 font-family: Lato;
@@ -149,16 +174,25 @@ font-weight: bold;
 font-size: 1.1rem;
 color:#FFFFFF;
 cursor: pointer;
+a {
+    margin-top: 1.3vh;
+}
 `
-const ContainerA = styled.div`
-// width: 4.875vw
-width: 11%;
-// height: 4.95vh;
-height: 100%;
+
+const P = styled.p`
+border-left: 1px solid white;
+border-right: 1px solid white;
+margin-left: -1vw;
+padding-left:2vw;
+margin-right: 2vw;
 `
 
 const ContainerOptions = styled.div`
-display:flex;
+display:grid;
+justify-content: space-around;
+width: 40vw;
+grid-template-columns: 1fr 1fr 0.5fr;
+align-items: center;
 `
 
 const ContainerHeaderDown = styled.section`
