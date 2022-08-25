@@ -57,7 +57,7 @@ const SideBar = ({setView}) => {
         </Button>
         <Button>
           <Img alt="" src={cerrar} />
-          <Parrafo>Cerrar sesion</Parrafo>
+          <Parrafo>Cerrar Sesion</Parrafo>
           <Img alt="" src={flecha} />
         </Button>
       </Section>
@@ -66,49 +66,84 @@ const SideBar = ({setView}) => {
 };
 export default SideBar;
 
+// const Div = styled.div`
+// height: auto;
+// width: 22vw;
+// border-radius: 0.3vw;
+// position: absolute;
+// background: #ffffff;
+// box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.2);
+// border-radius: 4px;
+// margin-left:4.8vw ;
+// `
+const Section = styled.section`
+margin:1.6vw;
+display:flex;
+flex-direction:column ;
+justify-content: flex-start ;
+
+`
+
+// const Button = styled.button`
+// display:inline-flex;
+// width:100%;
+// justify-content:flex-start ;
+// align-items:center ;
+// background:none;
+// border: none;
+// padding:1vw;
+// border-bottom: 1px solid #F0F0F0;
+// font-family: "Lato";
+// font-style: normal;
+// font-weight: normal;
+// font-size: 1.2vw;
+// background: #ffffff;
+// cursor: pointer;
+// &:hover  {
+//   color: #FF6200;
+// }
+// `
+// const Img = styled.img`
+
+// position: relative;
+// display:flex ;
+// justify-content:flex-start ;
+// background: #FFFFFF;
+// `
+const Parrafo = styled.p`
+
+`
 const Div = styled.div`
-height: auto;
-width: 22vw;
+display:grid ;
+grid-template-rows:auto;
+height: 97.5vh;
+width: 25vw;
 border-radius: 0.3vw;
 position: absolute;
 background: #ffffff;
 box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.2);
-border-radius: 4px;
-margin-left:4.8vw ;
-`
-const Section = styled.section`
-margin:1.6vw;
-display:;
-flex-direction:column ;
-justify-content: flex-start ;
+
+
 `
 
 const Button = styled.button`
-display:inline-flex;
-width:100%;
-justify-content:flex-start ;
+display:grid;
+grid-template-columns:1fr 4fr 1fr ;
+justify-content:center ;
 align-items:center ;
 background:none;
-border: none;
-padding:1vw;
-border-bottom: 1px solid #F0F0F0;
+border:none;
+border: 1px solid #F0F0F0;
 font-family: "Lato";
 font-style: normal;
 font-weight: normal;
 font-size: 1.2vw;
+justify-content:space-around;
 background: #ffffff;
-cursor: pointer;
-&:hover  {
-  color: #FF6200;
-}
 `
 const Img = styled.img`
-
 position: relative;
-display:flex ;
-justify-content:flex-start ;
+left: 39.58%;
+right: 39.58%;
 background: #FFFFFF;
-`
-const Parrafo = styled.p`
-
 `
