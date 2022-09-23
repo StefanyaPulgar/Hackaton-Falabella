@@ -27,7 +27,7 @@ justify-content: center;
 
 `
 const Button = styled.button`
-background: ##FF6200;
+background: #FF6200;
 padding: 8px 24px 9px;
 border:none;
 outline: none;
@@ -48,6 +48,6 @@ color: #FFFFFF;
     background: #FF6200;
     // display: none;
 }
-}
+
 
 `
